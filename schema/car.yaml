@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Car Data API
+  version: 1.0.0
+  description: API for managing car data
+paths: {}
+components:
+  schemas:
+    Car:
+      type: object
+      properties:
+        year:
+          type: integer
+          description: The year the car was manufactured
+          example: 2020
+        model:
+          type: string
+          description: The model of the car
+          example: Model S
+        make:
+          type: string
+          description: The manufacturer of the car
+          example: Tesla
+      required:
+        - year
+        - model
+        - make
