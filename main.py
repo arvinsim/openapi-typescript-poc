@@ -21,12 +21,20 @@ users = [
 ]
 
 
-@app.get("/users")
+@app.get(
+    "/users",
+    summary="Get all users",
+    description="Get the user information of all users",
+)
 def read_users():
     return users
 
 
-@app.get("/users/{user_id}")
+@app.get(
+    "/users/{user_id}",
+    summary="Get a specific user",
+    description="Get a specific user's information based on the user id provided",
+    )
 def read_user(user_id: int, q: Union[str, None] = None):
     for user in users:
         if user_id == user.get('id'):
@@ -40,8 +48,8 @@ def custom_openapi():
     openapi_schema = get_openapi(
         title="Custom title",
         version="2.5.0",
-        summary="This is a very custom OpenAPI schema",
-        description="Here's a longer description of the custom **OpenAPI** schema",
+        summary="This is an OpenAPI schema for the Users API",
+        description="This is a Users API endpoint for the purposes of testing out openapi-typescript",
         routes=app.routes,
     )
     openapi_schema["info"]["x-logo"] = {

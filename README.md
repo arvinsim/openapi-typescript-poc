@@ -33,13 +33,19 @@ uvicorn main:app --reload
 
 ## Process
 
-**Generate Typescript schema from local schema**
+**Generate Typescript types from local schema**
 
 ```shell
 npx openapi-typescript ./schema/car.yaml -o ./types/car.d.ts
 ```
 
-**Generate Typescript schema from remote schema(FastAPI)**
+**Generate Typescript types from local schema downloaded from documentation API**
+
+```shell
+npx openapi-typescript ./schema/users.json -o ./types/users.d.ts
+```
+
+**Generate Typescript types from remote schema(FastAPI)**
 
 ```shell
 npx openapi-typescript https://127.0.0.1:8000/openapi.yaml -o ./types/api/users.d.ts
