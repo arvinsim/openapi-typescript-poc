@@ -32,7 +32,7 @@ uvicorn main:app --reload
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
-## Process
+## Commands
 
 **Generate Typescript types from local schema**
 
@@ -46,8 +46,13 @@ npx openapi-typescript ./schema/car.yaml -o ./types/car.d.ts
 npx openapi-typescript ./schema/users.json -o ./types/users.d.ts
 ```
 
-**Generate Typescript types from remote schema(FastAPI)**
+**Generate Typescript types from remote schema(local development FastAPI server)**
 
 ```shell
 npx openapi-typescript https://127.0.0.1:8000/openapi.yaml -o ./types/api/users.d.ts
 ```
+
+**Generate Typescript types from remote schema(with authentication)**
+
+1. Copy `redocly.template.yaml` to `redocly.yaml`
+2. Configure it to point to the API you want and add authentication details if needed
