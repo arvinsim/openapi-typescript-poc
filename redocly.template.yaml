@@ -1,0 +1,6 @@
+resolve:
+  http:
+    headers:
+      - matches: https://api.example.com/v2/**
+        name: X-API-KEY
+        envVariable: SECRET_KEY
