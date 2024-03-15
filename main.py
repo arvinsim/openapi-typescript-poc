@@ -40,23 +40,3 @@ def read_user(user_id: int, q: Union[str, None] = None):
         if user_id == user.get('id'):
             return user
     raise Exception(f'There is no user of id: {user_id}')
-
-
-def custom_openapi():
-    if app.openapi_schema:
-        return app.openapi_schema
-    openapi_schema = get_openapi(
-        title="Custom title",
-        version="2.5.0",
-        summary="This is an OpenAPI schema for the Users API",
-        description="This is a Users API endpoint for the purposes of testing out openapi-typescript",
-        routes=app.routes,
-    )
-    openapi_schema["info"]["x-logo"] = {
-        "url": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"
-    }
-    app.openapi_schema = openapi_schema
-    return app.openapi_schema
-
-
-app.openapi = custom_openapi

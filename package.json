@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev": "uvicorn main:app --reload",
+    "generate-from-local-schema": "npx openapi-typescript ./schema/users.json -o ./types/users.d.ts",
+    "generate-from-local-api": "npx openapi-typescript http://127.0.0.1:8000/openapi.json -o ./types/openapi.d.ts"
+  },
   "devDependencies": {
     "openapi-typescript": "^7.0.0-next.8",
     "typescript": "^5.4.2"

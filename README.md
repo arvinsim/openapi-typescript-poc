@@ -49,7 +49,7 @@ npx openapi-typescript ./schema/users.json -o ./types/users.d.ts
 **Generate Typescript types from remote schema(local development FastAPI server)**
 
 ```shell
-npx openapi-typescript https://127.0.0.1:8000/openapi.yaml -o ./types/api/users.d.ts
+npx openapi-typescript https://127.0.0.1:8000/openapi.json -o ./types/openapi.d.ts
 ```
 
 **Generate Typescript types from remote schema(with authentication)**
