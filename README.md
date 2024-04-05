@@ -12,6 +12,13 @@ These are the advantages of this approach
 - Eliminate the tedious job of manually defining types
 - Ensure that the types are in sync with the current types defined in the API endpoint
 
+## Milestones
+
+- [x] Setup Python server as mock OpenAPI compatible server
+- [x] Generate types from local schema downloaded from documentation API
+- [x] Generate types from remote schema using the mock server
+- [ ] Generate types from remote schema with Authentication
+
 ## Setup
 
 ### OpenAPI Typescript
