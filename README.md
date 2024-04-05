@@ -1,6 +1,16 @@
 # OpenAPI Typescript Proof of Concept
 
+## Link
+
+https://openapi-ts.pages.dev/
+
 ## Goals
+
+Automate the creation of Typescript definitions from an OpenAPI compatible API endpoint.
+
+These are the advantages of this approach
+- Eliminate the tedious job of manually defining types
+- Ensure that the types are in sync with the current types defined in the API endpoint
 
 ## Setup
 
